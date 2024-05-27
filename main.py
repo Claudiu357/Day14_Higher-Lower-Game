@@ -7,11 +7,13 @@ score = 0
 print(logo)
 compare_A = random.choice(data)
 compare_B = random.choice(data)
+if compare_A == compare_B:
+    compare_B = random.choice(data)
 while game_running:
     print(f"Your score is {score}")
     print(f"Compare A:{compare_A['name']}, a {compare_A['description']}, from {compare_A['country']}")
     print(vs)
-    print(f"Compare B:{compare_B['name']}, a {compare_B['description']}, from {compare_B['country']}")
+    print(f"Against B:{compare_B['name']}, a {compare_B['description']}, from {compare_B['country']}")
     is_choice = True
     while is_choice:
         choice = input("Who has more followers?Type A or B?").upper()
